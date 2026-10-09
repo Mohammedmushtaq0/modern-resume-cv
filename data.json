@@ -1,0 +1,88 @@
+{
+  "personal": {
+    "name": "Your Name",
+    "jobTitle": "Your Job Title",
+    "email": "your.email@example.com",
+    "phone": "+1234567890",
+    "location": "Your City, Country",
+    "avatar": "assets/images/profile.jpg",
+    "cvFile": "assets/resume/your-resume.pdf",
+    "cvFileName": "your-resume.pdf"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourusername"
+  },
+  "meta": {
+    "website": "https://yourwebsite.com",
+    "description": "Your professional summary and expertise. Customize this description to highlight your skills and experience.",
+    "keywords": "Your Name, Job Title, Skills, Resume, CV"
+  },
+  "summary": [
+    "Write a brief professional summary highlighting your expertise, experience, and what makes you unique. This should be 2-3 sentences that capture your professional identity.",
+    "Add more details about your specialization, key technologies you work with, and your approach to problem-solving. This paragraph should expand on your technical skills and methodologies.",
+    "Conclude with your working style, collaboration approach, or key achievements. This final paragraph should give readers insight into how you work and what value you bring to teams and projects."
+  ],
+  "experience": [
+    {
+      "title": "Your Job Title",
+      "company": "Company Name",
+      "companyUrl": "https://company-website.com",
+      "period": "MM/YYYY – Present",
+      "location": "Location (Remote/On-site)",
+      "responsibilities": [
+        "Describe your key responsibility or achievement in this role.",
+        "Highlight another important contribution or project you worked on.",
+        "Mention technologies, methodologies, or skills you used.",
+        "Add any notable results, metrics, or impact you achieved."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Name 1",
+      "type": "Web Application",
+      "role": "Full Stack Developer",
+      "technologies": "React, Node.js, PostgreSQL",
+      "description": "Describe your project, your role, key features you built, and technologies you used. Highlight any challenges you overcame or results you achieved."
+    },
+    {
+      "name": "Project Name 2",
+      "type": "Mobile App",
+      "role": "Frontend Developer",
+      "technologies": "React Native, TypeScript",
+      "description": "Another project description. You can add as many projects as you want by adding more objects to this array."
+    },
+    {
+      "name": "Project Name 3",
+      "type": "Open Source",
+      "role": "Contributor",
+      "technologies": "Python, Docker, Kubernetes",
+      "description": "Third project example showing that you can extend the projects array with multiple entries."
+    }
+  ],
+  "skills": ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5", "Skill 6"],
+  "education": [
+    {
+      "degree": "Degree Name",
+      "institution": "University Name",
+      "institutionUrl": "https://university-website.com",
+      "period": "MM/YYYY – MM/YYYY",
+      "location": "City, Country"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate Name 1",
+      "url": "https://certificate-link.com"
+    },
+    {
+      "name": "Certificate Name 2",
+      "url": "https://certificate-link.com"
+    },
+    {
+      "name": "Certificate Name 3",
+      "url": "https://certificate-link.com"
+    }
+  ]
+}

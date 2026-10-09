@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Optional: Keep your personal data private
+# Uncomment if you want to ignore your personal files
+# assets/images/profile.jpg
+# assets/resume/*.pdf
+

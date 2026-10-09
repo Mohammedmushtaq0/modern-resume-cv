@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary Meta Tags -->
+    <title id="page-title">Loading...</title>
+    <meta id="meta-title" name="title" content="Loading..." />
+    <meta id="meta-description" name="description" content="Loading..." />
+    <meta id="meta-keywords" name="keywords" content="Loading..." />
+    <meta id="meta-author" name="author" content="Loading..." />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile" />
+    <meta id="og-url" property="og:url" content="https://yourwebsite.com/" />
+    <meta id="og-title" property="og:title" content="Loading..." />
+    <meta id="og-description" property="og:description" content="Loading..." />
+    <meta
+      id="og-image"
+      property="og:image"
+      content="https://yourwebsite.com/assets/images/profile.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta id="og-first-name" property="profile:first_name" content="Loading" />
+    <meta id="og-last-name" property="profile:last_name" content="Loading" />
+    <meta id="og-username" property="profile:username" content="yourusername" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      id="twitter-url"
+      name="twitter:url"
+      content="https://yourwebsite.com/"
+    />
+    <meta id="twitter-title" name="twitter:title" content="Loading..." />
+    <meta
+      id="twitter-description"
+      name="twitter:description"
+      content="Loading..."
+    />
+    <meta
+      id="twitter-image"
+      name="twitter:image"
+      content="https://yourwebsite.com/assets/images/profile.jpg"
+    />
+    <meta id="twitter-creator" name="twitter:creator" content="@yourusername" />
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#ffffff" />
+    <link id="canonical" rel="canonical" href="https://yourwebsite.com/" />
+
+    <!-- Favicon -->
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/jpeg"
+      href="assets/images/profile.jpg"
+    />
+
+    <!-- Print Styles -->
+    <style>
+      @media print {
+        body {
+          background: white !important;
+          padding: 0 !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .bg-white {
+          box-shadow: none !important;
+          border: none !important;
+        }
+        a {
+          color: #111 !important;
+          text-decoration: none !important;
+        }
+        .shadow-2xl {
+          box-shadow: none !important;
+        }
+        @page {
+          margin: 1cm;
+        }
+      }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "Inter",
+                "Arial",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-out;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .animate-fade-in {
+          animation: none;
+        }
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+      .focus\:not-sr-only:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: inherit;
+        margin: inherit;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+      }
+    </style>
+  </head>
+  <body
+    class="m-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 min-h-screen py-8 md:py-12 text-[#111] text-base leading-[1.6] font-sans"
+  >
+    <!-- Skip to main content for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg"
+    >
+      Skip to main content
+    </a>
+
+    <!-- PDF Download Button -->
+    <div class="max-w-[900px] mx-auto px-4 md:px-6 mb-4 no-print">
+      <a
+        id="cv-download-link"
+        href="#"
+        download=""
+        class="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 z-50 group no-underline"
+        aria-label="Download PDF Resume"
+        title="Download PDF Resume"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          ></path>
+        </svg>
+        <span class="hidden md:inline font-medium">Download CV</span>
+      </a>
+    </div>
+
+    <div class="max-w-[900px] mx-auto px-4 md:px-6">
+      <div
+        class="bg-white shadow-2xl rounded-lg overflow-hidden border border-gray-200 animate-fade-in"
+      >
+        <div class="px-8 md:px-12 py-10 md:py-12">
+          <header
+            class="flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-6 items-start md:items-end justify-between pb-6 mb-6 border-b-2 border-gray-200"
+          >
+            <div
+              class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full md:w-auto"
+            >
+              <img
+                id="avatar-img"
+                src=""
+                alt=""
+                width="144"
+                height="144"
+                loading="eager"
+                class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full object-cover shadow-xl ring-4 ring-white flex-shrink-0 border-2 border-gray-100 transition-transform hover:scale-105"
+              />
+              <div class="flex-1 min-w-0">
+                <h1
+                  id="name-heading"
+                  class="m-0 text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-gray-900 tracking-tight"
+                >
+                  Loading...
+                </h1>
+                <div
+                  id="job-title"
+                  class="text-lg md:text-xl text-gray-600 mt-2 font-medium"
+                >
+                  Loading...
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="contact-info"
+              class="text-sm text-gray-600 flex flex-col gap-1.5 text-left md:text-right w-full md:w-auto"
+              aria-label="Contact"
+            >
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </header>
+
+          <main
+            id="main-content"
+            class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-10 mt-2"
+          >
+            <section class="pt-1">
+              <h2
+                class="mt-6 mb-4 text-xs font-bold tracking-widest uppercase text-gray-700 border-t-2 border-gray-200 pt-4 first:mt-0 first:border-t-0 first:pt-0"
+              >
+                Summary
+              </h2>
+              <div id="summary-content">
+                <!-- Will be populated by JavaScript -->
+              </div>
+
+              <h2
+                class="mt-6 mb-4 text-xs font-bold tracking-widest uppercase text-gray-700 border-t-2 border-gray-200 pt-4"
+              >
+                Professional experience
+              </h2>
+              <div id="experience-content">
+                <!-- Will be populated by JavaScript -->
+              </div>
+
+              <h2
+                class="mt-6 mb-4 text-xs font-bold tracking-widest uppercase text-gray-700 border-t-2 border-gray-200 pt-4"
+              >
+                Projects
+              </h2>
+              <div id="projects-content">
+                <!-- Will be populated by JavaScript -->
+              </div>
+            </section>
+
+            <section class="pt-1">
+              <h2
+                class="mt-6 mb-4 text-xs font-bold tracking-widest uppercase text-gray-700 border-t-2 border-gray-200 pt-4 first:mt-0 first:border-t-0 first:pt-0"
+              >
+                Skills
+              </h2>
+              <div
+                id="skills-content"
+                class="flex flex-wrap gap-2.5"
+                aria-label="Skills list"
+              >
+                <!-- Will be populated by JavaScript -->
+              </div>
+
+              <h2
+                class="mt-6 mb-4 text-xs font-bold tracking-widest uppercase text-gray-700 border-t-2 border-gray-200 pt-4"
+              >
+                Education
+              </h2>
+              <div id="education-content">
+                <!-- Will be populated by JavaScript -->
+              </div>
+
+              <h2
+                class="mt-6 mb-4 text-xs font-bold tracking-widest uppercase text-gray-700 border-t-2 border-gray-200 pt-4"
+              >
+                Certificates
+              </h2>
+              <ul
+                id="certificates-content"
+                class="my-2 ml-6 pl-0 list-disc space-y-2"
+              >
+                <!-- Will be populated by JavaScript -->
+              </ul>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="max-w-[900px] mx-auto px-4 md:px-6 mt-8 mb-4 text-center no-print"
+    >
+      <div class="text-sm text-gray-500">
+        Created using
+        <a
+          href="https://github.com/gligor99/resume-template"
+          target="_blank"
+          rel="noopener"
+          class="text-blue-600 hover:text-blue-700 hover:underline font-medium transition-colors"
+          >Resume Template</a
+        >
+      </div>
+    </footer>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script id="structured-data-person" type="application/ld+json"></script>
+    <script id="structured-data-webpage" type="application/ld+json"></script>
+
+    <script>
+      async function loadResumeData() {
+        try {
+          const data = {
+  "personal": {
+    "name": "Your Name",
+    "jobTitle": "Your Job Title",
+    "email": "your.email@example.com",
+    "phone": "+1234567890",
+    "location": "Your City, Country",
+    "avatar": "assets/images/profile.jpg",
+    "cvFile": "assets/resume/your-resume.pdf",
+    "cvFileName": "your-resume.pdf"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourusername",
+    "twitter": "https://twitter.com/yourusername",
+    "dribbble": "https://dribbble.com/yourusername"
+  },
+  "meta": {
+    "website": "https://yourwebsite.com",
+    "description": "Your professional summary and expertise. Customize this description to highlight your skills and experience.",
+    "keywords": "Your Name, Job Title, Skills, Resume, CV"
+  },
+  "summary": [
+    "Write a brief professional summary highlighting your expertise, experience, and what makes you unique. This should be 2-3 sentences that capture your professional identity.",
+    "Add more details about your specialization, key technologies you work with, and your approach to problem-solving. This paragraph should expand on your technical skills and methodologies.",
+    "Conclude with your working style, collaboration approach, or key achievements. This final paragraph should give readers insight into how you work and what value you bring to teams and projects."
+  ],
+  "experience": [
+    {
+      "title": "Your Job Title",
+      "company": "Company Name",
+      "companyUrl": "https://company-website.com",
+      "period": "MM/YYYY – Present",
+      "location": "Location (Remote/On-site)",
+      "responsibilities": [
+        "Describe your key responsibility or achievement in this role.",
+        "Highlight another important contribution or project you worked on.",
+        "Mention technologies, methodologies, or skills you used.",
+        "Add any notable results, metrics, or impact you achieved."
+      ]
+    },
+    {
+      "title": "Your Job Title",
+      "company": "Company Name",
+      "companyUrl": "https://company-website.com",
+      "period": "MM/YYYY – Present",
+      "location": "Location (Remote/On-site)",
+      "responsibilities": [
+        "Describe your key responsibility or achievement in this role.",
+        "Highlight another important contribution or project you worked on.",
+        "Mention technologies, methodologies, or skills you used.",
+        "Add any notable results, metrics, or impact you achieved."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Name 1",
+      "type": "Web Application",
+      "role": "Full Stack Developer",
+      "technologies": "React, Node.js, PostgreSQL",
+      "description": "Describe your project, your role, key features you built, and technologies you used. Highlight any challenges you overcame or results you achieved."
+    },
+    {
+      "name": "Project Name 2",
+      "type": "Mobile App",
+      "role": "Frontend Developer",
+      "technologies": "React Native, TypeScript",
+      "description": "Another project description. You can add as many projects as you want by adding more objects to this array."
+    },
+    {
+      "name": "Project Name 3",
+      "type": "Open Source",
+      "role": "Contributor",
+      "technologies": "Python, Docker, Kubernetes",
+      "description": "Third project example showing that you can extend the projects array with multiple entries."
+    }
+  ],
+  "skills": [
+    "Skill 1",
+    "Skill 2",
+    "Skill 3",
+    "Skill 4",
+    "Skill 5",
+    "Skill 6",
+    "Skill 7",
+    "Skill 8",
+    "Skill 9",
+    "Skill 10"
+  ],
+  "education": [
+    {
+      "degree": "Degree Name",
+      "institution": "University Name",
+      "institutionUrl": "https://university-website.com",
+      "period": "MM/YYYY – MM/YYYY",
+      "location": "City, Country"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate Name 1",
+      "url": "https://certificate-link.com"
+    },
+    {
+      "name": "Certificate Name 2",
+      "url": "https://certificate-link.com"
+    },
+    {
+      "name": "Certificate Name 3",
+      "url": "https://certificate-link.com"
+    }
+  ]
+};
+
+          updateMetaTags(data);
+          renderPersonalInfo(data);
+          renderSummary(data);
+          renderExperience(data);
+          renderProjects(data);
+          renderSkills(data);
+          renderEducation(data);
+          renderCertificates(data);
+          renderStructuredData(data);
+        } catch (error) {
+          console.error("Error loading resume data:", error);
+          document.body.innerHTML =
+            '<div class="p-8 text-center"><h1 class="text-2xl font-bold text-red-600">Error loading resume data</h1><p class="mt-4 text-gray-600">Please check that data.json exists and is valid, or that the resume data is properly included in the HTML.</p><p class="mt-2 text-sm text-gray-500">Error: ' +
+            error.message +
+            "</p></div>";
+        }
+      }
+
+      function updateMetaTags(data) {
+        const personal = data.personal;
+        const meta = data.meta;
+        const nameParts = personal.name.split(" ");
+        const firstName = nameParts[0] || "";
+        const lastName = nameParts.slice(1).join(" ") || "";
+        const fullTitle = `${personal.name} — ${personal.jobTitle} | Resume`;
+        const website = meta.website;
+
+        document.getElementById("page-title").textContent = fullTitle;
+        document
+          .getElementById("meta-title")
+          .setAttribute("content", fullTitle);
+        document
+          .getElementById("meta-description")
+          .setAttribute("content", meta.description);
+        document
+          .getElementById("meta-keywords")
+          .setAttribute("content", meta.keywords);
+        document
+          .getElementById("meta-author")
+          .setAttribute("content", personal.name);
+
+        document
+          .getElementById("og-url")
+          .setAttribute("content", website + "/");
+        document
+          .getElementById("og-title")
+          .setAttribute("content", `${personal.name} — ${personal.jobTitle}`);
+        document
+          .getElementById("og-description")
+          .setAttribute("content", meta.description);
+        document
+          .getElementById("og-image")
+          .setAttribute("content", website + "/" + personal.avatar);
+        document
+          .getElementById("og-first-name")
+          .setAttribute("content", firstName);
+        document
+          .getElementById("og-last-name")
+          .setAttribute("content", lastName);
+        const githubUrl = data.social.github || "";
+        const username = githubUrl
+          ? githubUrl.split("/").pop()
+          : "yourusername";
+        document
+          .getElementById("og-username")
+          .setAttribute("content", username);
+
+        document
+          .getElementById("twitter-url")
+          .setAttribute("content", website + "/");
+        document
+          .getElementById("twitter-title")
+          .setAttribute("content", `${personal.name} — ${personal.jobTitle}`);
+        document
+          .getElementById("twitter-description")
+          .setAttribute("content", meta.description);
+        document
+          .getElementById("twitter-image")
+          .setAttribute("content", website + "/" + personal.avatar);
+        document
+          .getElementById("twitter-creator")
+          .setAttribute("content", "@" + username);
+
+        document
+          .getElementById("canonical")
+          .setAttribute("href", website + "/");
+        document
+          .getElementById("favicon")
+          .setAttribute("href", personal.avatar);
+      }
+
+      function renderPersonalInfo(data) {
+        const personal = data.personal;
+        const social = data.social;
+
+        const avatarImg = document.getElementById("avatar-img");
+        avatarImg.src = personal.avatar;
+        avatarImg.alt = `${personal.name} - ${personal.jobTitle} profile photo`;
+
+        document.getElementById("name-heading").textContent = personal.name;
+        document.getElementById("job-title").textContent = personal.jobTitle;
+
+        const contactInfo = document.getElementById("contact-info");
+        contactInfo.innerHTML = `
+          <div>
+            <a
+              href="mailto:${personal.email}"
+              class="text-gray-700 hover:text-gray-900 no-underline hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1"
+              >${personal.email}</a
+            >
+          </div>
+          <div>
+            <a
+              href="tel:${personal.phone}"
+              class="text-gray-700 hover:text-gray-900 no-underline hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1"
+              >${personal.phone}</a
+            >
+          </div>
+          <div class="text-gray-600">${personal.location}</div>
+          ${Object.entries(social)
+            .map(([key, url]) => {
+              const displayName = url
+                .replace("https://www.", "")
+                .replace("https://", "")
+                .replace("http://", "");
+              return `
+          <div>
+            <a
+              href="${url}"
+              target="_blank"
+              rel="noopener"
+              class="text-gray-700 hover:text-gray-900 no-underline hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1"
+              >${displayName}</a
+            >
+          </div>`;
+            })
+            .join("")}
+        `;
+
+        const cvLink = document.getElementById("cv-download-link");
+        cvLink.href = personal.cvFile;
+        cvLink.download = personal.cvFileName;
+      }
+
+      function renderSummary(data) {
+        const summaryContent = document.getElementById("summary-content");
+        summaryContent.innerHTML = data.summary
+          .map(
+            (paragraph) =>
+              `<p class="mb-3 text-gray-700 leading-relaxed">${paragraph}</p>`
+          )
+          .join("");
+      }
+
+      function renderExperience(data) {
+        const experienceContent = document.getElementById("experience-content");
+        experienceContent.innerHTML = data.experience
+          .map(
+            (exp) => `
+          <div class="mb-6">
+            <h3 class="mt-1 mb-2 text-lg font-bold text-gray-900">
+              ${exp.title},
+              <a
+                href="${exp.companyUrl}"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-900 hover:text-blue-600 no-underline hover:underline transition-colors"
+                >${exp.company}</a
+              >
+            </h3>
+            <div class="text-gray-600 text-sm flex gap-3 flex-wrap mb-3">
+              <span class="font-medium">${exp.period}</span>
+              <span class="text-gray-500">•</span>
+              <span>${exp.location}</span>
+            </div>
+            <ul class="my-2 ml-6 pl-0 list-disc space-y-2">
+              ${exp.responsibilities
+                .map(
+                  (resp) =>
+                    `<li class="pl-2 leading-relaxed text-gray-700">${resp}</li>`
+                )
+                .join("")}
+            </ul>
+          </div>
+        `
+          )
+          .join("");
+      }
+
+      function renderProjects(data) {
+        const projectsContent = document.getElementById("projects-content");
+        projectsContent.innerHTML = data.projects
+          .map(
+            (project) => `
+          <div class="mb-6">
+            <h3 class="mt-1 mb-2 text-lg font-bold text-gray-900">
+              ${project.name}
+            </h3>
+            <div class="text-sm text-gray-600 mb-3 font-medium">
+              ${project.type} | ${project.role} (${project.technologies})
+            </div>
+            <p class="mb-3 text-gray-700 leading-relaxed">
+              ${project.description}
+            </p>
+          </div>
+        `
+          )
+          .join("");
+      }
+
+      function renderSkills(data) {
+        const skillsContent = document.getElementById("skills-content");
+        skillsContent.innerHTML = data.skills
+          .map(
+            (skill) =>
+              `<span
+            class="inline-block px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-700 font-medium hover:bg-gray-100 hover:border-gray-300 transition-colors"
+            >${skill}</span
+          >`
+          )
+          .join("");
+      }
+
+      function renderEducation(data) {
+        const educationContent = document.getElementById("education-content");
+        educationContent.innerHTML = data.education
+          .map(
+            (edu) => `
+          <div class="mb-6">
+            <h3 class="mt-1 mb-2 text-lg font-bold text-gray-900">
+              ${edu.degree},
+              <a
+                href="${edu.institutionUrl}"
+                target="_blank"
+                rel="noopener"
+                class="text-gray-900 hover:text-blue-600 no-underline hover:underline transition-colors"
+                >${edu.institution}</a
+              >
+            </h3>
+            <div class="text-gray-600 text-sm flex gap-3 flex-wrap">
+              <span class="font-medium">${edu.period}</span>
+              <span class="text-gray-500">•</span>
+              <span>${edu.location}</span>
+            </div>
+          </div>
+        `
+          )
+          .join("");
+      }
+
+      function renderCertificates(data) {
+        const certificatesContent = document.getElementById(
+          "certificates-content"
+        );
+        certificatesContent.innerHTML = data.certificates
+          .map(
+            (cert) => `
+          <li class="pl-2 leading-relaxed text-gray-700">
+            <a
+              href="${cert.url}"
+              target="_blank"
+              rel="noopener"
+              class="text-gray-900 hover:text-gray-700 no-underline hover:underline transition-colors"
+              >${cert.name}</a
+            >
+          </li>
+        `
+          )
+          .join("");
+      }
+
+      function renderStructuredData(data) {
+        const personal = data.personal;
+        const meta = data.meta;
+        const nameParts = personal.name.split(" ");
+        const locationParts = personal.location.split(", ");
+        const city = locationParts[0] || "";
+        const country = locationParts[1] || "";
+
+        const personSchema = {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: personal.name,
+          jobTitle: personal.jobTitle,
+          url: meta.website,
+          image: meta.website + "/" + personal.avatar,
+          email: personal.email,
+          telephone: personal.phone,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: city,
+            addressCountry: country,
+          },
+          sameAs: Object.values(data.social),
+          knowsAbout: data.skills,
+          alumniOf: data.education.map((edu) => ({
+            "@type": "EducationalOrganization",
+            name: edu.institution,
+            url: edu.institutionUrl,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: edu.location.split(", ")[0] || "",
+              addressCountry: edu.location.split(", ")[1] || "",
+            },
+          })),
+          hasCredential: data.certificates.map((cert) => ({
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "certification",
+            name: cert.name,
+            recognizedBy: {
+              "@type": "Organization",
+              name: "Organization Name",
+            },
+          })),
+          worksFor:
+            data.experience.length > 0
+              ? {
+                  "@type": "Organization",
+                  name: data.experience[0].company,
+                  url: data.experience[0].companyUrl,
+                }
+              : undefined,
+          description: meta.description,
+        };
+
+        if (!personSchema.worksFor) {
+          delete personSchema.worksFor;
+        }
+
+        document.getElementById("structured-data-person").textContent =
+          JSON.stringify(personSchema);
+
+        const webpageSchema = {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: `${personal.name} - Resume`,
+          description: `Professional resume of ${personal.name} - ${personal.jobTitle}`,
+          url: meta.website,
+          about: {
+            "@type": "Person",
+            name: personal.name,
+            jobTitle: personal.jobTitle,
+          },
+          mainEntity: {
+            "@type": "Person",
+            name: personal.name,
+            jobTitle: personal.jobTitle,
+          },
+        };
+
+        document.getElementById("structured-data-webpage").textContent =
+          JSON.stringify(webpageSchema);
+      }
+
+      loadResumeData();
+    </script>
+  </body>
+</html>
